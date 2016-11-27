@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guessing Game</title>
+	<script type="text/javascript">
+		var colors = ["blue","black","cyan","gold","grey","green","magneta","orange",
+		"red","white","yellow"];
+		var random = Math.random()*colors.length;
+		var target_index = Math.floor(random) + 1;
+		var target = colors[target_index];
+		var done = false;
+		var guess ="";
+
+		while(!done){
+			guess = prompt("I have a color in my mind among:\n blue,black,cyan,gold,grey,green,magneta,orange,red,white,yellow\n Wanna make guess:");
+			
+			if(guess == target){
+				done = true;
+			}
+			
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

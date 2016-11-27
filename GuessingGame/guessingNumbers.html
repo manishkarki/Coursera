@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess number</title>
+	<script type="text/javascript">
+		var random = Math.random()*100;
+		var target = Math.ceiling(random) + 1;
+		var finished = false;
+		var countGuess = 0;
+		console.log("the number is:"+ target)
+
+		alert("I have a number in mind 0 upto 100, if you could guess that!!\n");
+
+		while(!finished){
+			var input = prompt("Guess:");
+			number = parseInt(input);
+			finished = process();
+			countGuess +=1;
+		}
+
+		function process(){
+			if(isNaN(number)){
+				alert("Please enter a number");
+				return false;
+			}
+			if(number < 0 || number > 100){
+				alert("Please enter a number from 0 to 100");
+				return false;
+			}
+			if(number < target){
+				alert("Your guess is too small than mine");
+				return false;
+			}
+			if(number > target){
+				alert("your guess is too large than mine");
+				return false;
+			}
+
+			alert("your guess is correct, you took "+countGuess+" guesses");
+			return true;
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
